@@ -463,34 +463,14 @@
   </head>
   <body
     __processed_7adb44bb-c731-4b39-a819-dea3d74cf4d5__="true"
-    bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWllZ29tY29uIiwiYWRibG9ja2VyU3RhdHVzIjp7IkRJU1BMQVkiOiJkaXNhYmxlZCIsIkZBQ0VCT09LIjoiZGlzYWJsZWQiLCJUV0lUVEVSIjoiZGlzYWJsZWQiLCJSRURESVQiOiJkaXNhYmxlZCIsIlBJTlRFUkVTVCI6ImRpc2FibGVkIiwiSU5TVEFHUkFNIjoiZGlzYWJsZWQiLCJMSU5LRURJTiI6ImRpc2FibGVkIiwiQ09ORklHIjoiZGlzYWJsZWQifSwidmVyc2lvbiI6IjIuMC4yMiIsInNjb3JlIjoyMDAyMn1d"
+    bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWllZ29tY29uIiwiYWRibG9ja2VyU3RhdHVzIjp7IkRJU1BMQVkiOiJkaXNhYmxlZCIsIkZBQ0VCT09LIjoiZGlzYWJsZWQiLCJUV0lUVEVSIjoiZGlzYWJsZWQiLCJSRURESVQiOiJkaXNhYmxlZCIsIlBJTlRFUkVTVCI6ImRpc2FibGVkIiwiSU5TVEFHUkFNIjoiZGlzYWJsZWQiLCJMSU5LRURJTiI6ImRpc2FibGVkIiwiQ09ORklGOjoiZGlzYWJsZWQifSwidmVyc2lvbiI6IjIuMC4yMiIsInNjb3JlIjoyMDAyMn1d"
     data-new-gr-c-s-check-loaded="14.1235.0"
     data-gr-ext-installed=""
   >
     <div class="cake-container" bis_skin_checked="1">
       <div class="cake" bis_skin_checked="1">
         <div class="candle-container" id="candleContainer" bis_skin_checked="1">
-          <div class="candle" bis_skin_checked="1">
-            <div class="flame" bis_skin_checked="1"></div>
-            <div class="smoke" bis_skin_checked="1"></div>
-          </div>
-          <div class="candle" bis_skin_checked="1">
-            <div class="flame" bis_skin_checked="1"></div>
-            <div class="smoke" bis_skin_checked="1"></div>
-          </div>
-          <div class="candle" bis_skin_checked="1">
-            <div class="flame" bis_skin_checked="1"></div>
-            <div class="smoke" bis_skin_checked="1"></div>
-          </div>
-          <div class="candle" bis_skin_checked="1">
-            <div class="flame" bis_skin_checked="1"></div>
-            <div class="smoke" bis_skin_checked="1"></div>
-          </div>
-          <div class="candle" bis_skin_checked="1">
-            <div class="flame" bis_skin_checked="1"></div>
-            <div class="smoke" bis_skin_checked="1"></div>
-          </div>
-        </div>
+            </div>
 
         <div class="frosting" bis_skin_checked="1"></div>
         <div
@@ -600,7 +580,7 @@
     <script>
       // Global variables
       let candlesBlown = 0;
-      const totalCandles = 5;
+      const totalCandles = 3; // Reduced number of candles to 3
       let allCandlesBlown = false;
 
       // Initialize the page when it loads
@@ -609,34 +589,6 @@
         createBalloons();
         createConfetti();
         createDecorations();
-
-        // Add event listeners for candle interaction
-        document.querySelectorAll(".candle").forEach((candle) => {
-          candle.addEventListener("click", blowOutCandle);
-          candle.addEventListener("touchstart", blowOutCandle); // Better for mobile
-          candle.addEventListener("mouseover", function (e) {
-            if (e.buttons === 0) {
-              // Only trigger on hover when not clicking
-              blowOutCandle.call(this);
-            }
-          });
-        });
-
-        // For better mobile experience with touch
-        document.addEventListener("touchmove", function (e) {
-          const touch = e.touches[0];
-          const element = document.elementFromPoint(
-            touch.clientX,
-            touch.clientY
-          );
-          if (
-            element &&
-            element.classList.contains("candle") &&
-            !element.classList.contains("blown")
-          ) {
-            blowOutCandle.call(element);
-          }
-        });
 
         // Optional: Listen for keyboard input
         document.addEventListener("keypress", function (e) {
@@ -647,7 +599,7 @@
         });
       });
 
-      // Create candles for the cake
+      // Create candles for the cake dynamically
       function createCandles() {
         const candleContainer = document.getElementById("candleContainer");
 
@@ -663,6 +615,17 @@
 
           candle.appendChild(flame);
           candle.appendChild(smoke);
+          
+          // Add event listeners for interaction
+          candle.addEventListener("click", blowOutCandle);
+          candle.addEventListener("touchstart", blowOutCandle); // Better for mobile
+          candle.addEventListener("mouseover", function (e) {
+            if (e.buttons === 0) {
+              // Only trigger on hover when not clicking
+              blowOutCandle.call(this);
+            }
+          });
+          
           candleContainer.appendChild(candle);
         }
       }
@@ -825,6 +788,5 @@
         window.location.href = "letter.html";
       }
     </script>
-
   </body>
 </html>
