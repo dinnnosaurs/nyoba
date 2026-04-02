@@ -117,7 +117,7 @@
       /* Frosting & Decorations */
       .frosting {
         position: absolute;
-        top: -95px;
+        top: -94px;
         left: 25%;
         width: 50%;
         height: 8px;
@@ -138,18 +138,18 @@
       /* Candles */
       .candle-container {
         position: absolute;
-        top: -125px;
+        top: -120px; /* Aligned with Tier 3 top (-90) minus Candle Height (30) */
         left: 0;
         width: 100%;
         display: flex;
         justify-content: center;
-        gap: 15px;
+        gap: 12px;
         z-index: 15;
       }
 
       .candle {
         position: relative;
-        width: 8px;
+        width: 6px;
         height: 30px;
         background: linear-gradient(to top, #ffff99, #ff9933);
         border-radius: 4px;
@@ -380,129 +380,60 @@
 
       /* Improved Responsive Design */
       @media (max-width: 768px) {
-        .cake-container {
-          width: 250px;
-          height: 250px;
-        }
+        .cake-container { width: 250px; height: 250px; }
+        
+        .cake { width: 180px; height: 50px; }
+        .cake:before { top: -40px; height: 40px; }
+        .cake:after { top: -70px; height: 30px; }
+        .frosting { top: -73px; height: 6px; }
+        
+        .candle-container { gap: 10px; top: -95px; }
+        .candle { width: 5px; height: 25px; }
+        .flame { top: -16px; width: 10px; height: 16px; }
 
-        .cake {
-          width: 180px;
-          height: 50px;
-        }
-
-        .candle-container {
-          gap: 12px;
-        }
-
-        .wish-message h2 {
-          font-size: 24px;
-        }
-
-        .wish-message p {
-          font-size: 16px;
-        }
-
-        .nav-buttons {
-          padding: 0 20px;
-          bottom: 20px;
-        }
-
-        .btn {
-          padding: 10px 18px;
-          font-size: 15px;
-        }
+        .wish-message h2 { font-size: 24px; }
+        .wish-message p { font-size: 16px; }
+        .nav-buttons { padding: 0 20px; bottom: 20px; }
+        .btn { padding: 10px 18px; font-size: 15px; }
       }
 
       @media (max-width: 480px) {
-        .cake-container {
-          width: 200px;
-          height: 200px;
-          margin: 10px auto;
-        }
+        .cake-container { width: 200px; height: 200px; margin: 10px auto; }
+        
+        .cake { width: 150px; height: 40px; }
+        .cake:before { top: -35px; height: 35px; }
+        .cake:after { top: -60px; height: 25px; }
+        .frosting { top: -62px; height: 5px; }
+        
+        .candle-container { gap: 8px; top: -80px; }
+        .candle { width: 4px; height: 20px; }
+        .flame { top: -14px; width: 8px; height: 14px; }
 
-        .cake {
-          width: 150px;
-          height: 45px;
-        }
-
-        .candle-container {
-          gap: 10px;
-          top: -115px;
-        }
-
-        .candle {
-          width: 6px;
-          height: 25px;
-        }
-
-        .wish-message {
-          width: 85%;
-          padding: 20px;
-        }
-
-        .wish-message h2 {
-          font-size: 22px;
-          margin-bottom: 10px;
-        }
-
-        .wish-message p {
-          font-size: 14px;
-          margin-bottom: 15px;
-        }
-
-        .nav-buttons {
-          padding: 0 15px;
-          bottom: 15px;
-        }
-
-        .btn {
-          padding: 8px 14px;
-          font-size: 14px;
-          white-space: nowrap;
-        }
+        .wish-message { width: 85%; padding: 20px; }
+        .wish-message h2 { font-size: 22px; margin-bottom: 10px; }
+        .wish-message p { font-size: 14px; margin-bottom: 15px; }
+        .nav-buttons { padding: 0 15px; bottom: 15px; }
+        .btn { padding: 8px 14px; font-size: 14px; white-space: nowrap; }
       }
 
       /* Extra small devices */
       @media (max-width: 360px) {
-        .cake-container {
-          width: 180px;
-          height: 180px;
-        }
+        .cake-container { width: 180px; height: 180px; }
+        
+        .cake { width: 130px; height: 35px; }
+        .cake:before { top: -30px; height: 30px; }
+        .cake:after { top: -50px; height: 20px; }
+        .frosting { top: -52px; height: 4px; }
+        
+        .candle-container { gap: 6px; top: -67px; }
+        .candle { width: 3px; height: 17px; }
+        .flame { top: -12px; width: 6px; height: 12px; }
 
-        .cake {
-          width: 130px;
-          height: 40px;
-        }
-
-        .candle-container {
-          gap: 8px;
-          top: -110px;
-        }
-
-        .wish-message {
-          width: 90%;
-          padding: 15px;
-        }
-
-        .wish-message h2 {
-          font-size: 20px;
-        }
-
-        .wish-message p {
-          font-size: 13px;
-        }
-
-        .nav-buttons {
-          flex-direction: column;
-          align-items: center;
-          gap: 10px;
-        }
-
-        .btn {
-          width: 100%;
-          text-align: center;
-          font-size: 13px;
-        }
+        .wish-message { width: 90%; padding: 15px; }
+        .wish-message h2 { font-size: 20px; }
+        .wish-message p { font-size: 13px; }
+        .nav-buttons { flex-direction: column; align-items: center; gap: 10px; }
+        .btn { width: 100%; text-align: center; font-size: 13px; }
       }
     </style>
     <link
