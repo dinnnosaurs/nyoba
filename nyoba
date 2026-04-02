@@ -261,6 +261,7 @@
             color: #6a4c93;
             cursor: pointer;
             font-size: 1.2rem;
+            outline: none;
         }
 
         /* Back Button */
@@ -447,8 +448,7 @@
             <div class="modal-body">
                 <div class="playlist">
                     <h3 style="margin-bottom: 15px;">Lagu-lagu Spesial Untukmu 🎵</h3>
-                    
-                    <div class="playlist-item" data-src="https://github.com/dinnnosaurs/happy-birthday-v24/raw/main/Hindia%20-%20Rumah%20Ke%20Rumah.mp3">
+                    <div class="playlist-item" data-src="https://raw.githubusercontent.com/dinnnosaurs/happy-birthday-v24/main/Hindia%20-%20Rumah%20Ke%20Rumah.mp3">
                         <img src="3.jpg" alt="Song cover">
                         <div class="playlist-item-info">
                             <div class="playlist-item-title">Rumah ke Rumah</div>
@@ -456,17 +456,7 @@
                         </div>
                         <button class="playlist-item-play"><i class="fas fa-play"></i></button>
                     </div>
-                    
-                    <div class="playlist-item" data-src="https://github.com/dinnnosaurs/happy-birthday-v24/raw/main/Perunggu%20-%20Ini%20Abadi.mp3">
-                        <img src="1.jpg" alt="Song cover">
-                        <div class="playlist-item-info">
-                            <div class="playlist-item-title">Ini Abadi</div>
-                            <div class="playlist-item-artist">Perunggu</div>
-                        </div>
-                        <button class="playlist-item-play"><i class="fas fa-play"></i></button>
-                    </div>
-                    
-                    <div class="playlist-item" data-src="https://github.com/dinnnosaurs/happy-birthday-v24/raw/main/Hindia%20-%20semua%20lagu%20cinta%20terdengar%20sama.mp3">
+                    <div class="playlist-item" data-src="https://raw.githubusercontent.com/dinnnosaurs/happy-birthday-v24/main/Hindia%20-%20semua%20lagu%20cinta%20terdengar%20sama.mp3">
                         <img src="6.jpg" alt="Song cover">
                         <div class="playlist-item-info">
                             <div class="playlist-item-title">Semua Lagu Cinta Terdengar Sama</div>
@@ -474,17 +464,15 @@
                         </div>
                         <button class="playlist-item-play"><i class="fas fa-play"></i></button>
                     </div>
-                    
-                    <div class="playlist-item" data-src="https://github.com/dinnnosaurs/happy-birthday-v24/raw/main/Hindia%20-%20kids.mp3">
+                    <div class="playlist-item" data-src="https://raw.githubusercontent.com/dinnnosaurs/happy-birthday-v24/main/Hindia%20-%20everything%20u%20are.mp3">
                         <img src="2.jpeg" alt="Song cover">
                         <div class="playlist-item-info">
-                            <div class="playlist-item-title">Kids</div>
+                            <div class="playlist-item-title">Everything U Are</div>
                             <div class="playlist-item-artist">Hindia</div>
                         </div>
                         <button class="playlist-item-play"><i class="fas fa-play"></i></button>
                     </div>
-                    
-                    <div class="playlist-item" data-src="https://github.com/dinnnosaurs/happy-birthday-v24/raw/main/Perunggu%20-%20Pastikan%20Riuh%20Akhiri%20Malammu.mp3">
+                    <div class="playlist-item" data-src="https://raw.githubusercontent.com/dinnnosaurs/happy-birthday-v24/main/Perunggu%20-%20Pastikan%20Riuh%20Akhiri%20Malammu.mp3">
                         <img src="5.jpg" alt="Song cover">
                         <div class="playlist-item-info">
                             <div class="playlist-item-title">Pastikan Riuh Akhiri Malammu</div>
@@ -492,7 +480,14 @@
                         </div>
                         <button class="playlist-item-play"><i class="fas fa-play"></i></button>
                     </div>
-
+                    <div class="playlist-item" data-src="https://raw.githubusercontent.com/dinnnosaurs/happy-birthday-v24/main/Perunggu%20-%20Ini%20Abadi.mp3">
+                        <img src="1.jpg" alt="Song cover">
+                        <div class="playlist-item-info">
+                            <div class="playlist-item-title">Ini Abadi</div>
+                            <div class="playlist-item-artist">Perunggu</div>
+                        </div>
+                        <button class="playlist-item-play"><i class="fas fa-play"></i></button>
+                    </div>
                 </div>
                 <div style="margin-top: 20px;">
                     <a href="#" download class="back-button" style="background: #ffb6c1; border-color: #ffb6c1; color: white;">
@@ -511,8 +506,7 @@
         <source src="https://cdn.pixabay.com/download/audio/2021/08/04/audio_bb630cc098.mp3?filename=cute-notification-ringtone-1-173850.mp3" type="audio/mpeg">
     </audio>
     <audio id="background-music" loop>
-        <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8c8a73467.mp3?filename=relaxing-145038.mp3" type="audio/mpeg">
-    </audio>
+        </audio>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/canvas-confetti/1.5.1/confetti.browser.min.js"></script>
@@ -580,74 +574,80 @@
                 modalOverlay.classList.remove('active');
             });
 
-            // --- Playlist Logic Implementation ---
-            const playlistItems = document.querySelectorAll('.playlist-item');
-            const backgroundMusic = document.getElementById('background-music');
+            // --- AUDIO PLAYER LOGIC ---
             const musicToggle = document.getElementById('music-toggle');
             const musicIcon = document.getElementById('music-icon');
-            let isMusicPlaying = false;
+            const backgroundMusic = document.getElementById('background-music');
+            const playlistItems = document.querySelectorAll('.playlist-item');
+            
+            // To track state specifically for the play buttons
+            let activePlayBtn = null;
 
+            // Handle Playlist Clicks
             playlistItems.forEach(item => {
                 const playBtn = item.querySelector('.playlist-item-play');
                 
                 playBtn.addEventListener('click', function() {
                     const songSrc = item.getAttribute('data-src');
+                    const icon = playBtn.querySelector('i');
                     
-                    // Check if current song is already playing
-                    if (backgroundMusic.src === songSrc && !backgroundMusic.paused) {
-                        // Pause the song
-                        backgroundMusic.pause();
-                        playBtn.innerHTML = '<i class="fas fa-play"></i>';
-                        musicIcon.classList.remove('fa-volume-up');
-                        musicIcon.classList.add('fa-volume-mute');
-                        isMusicPlaying = false;
+                    // If clicking the currently playing song
+                    if (backgroundMusic.src === songSrc) {
+                        if (!backgroundMusic.paused) {
+                            backgroundMusic.pause();
+                            icon.className = 'fas fa-play';
+                            musicIcon.classList.remove('fa-volume-up');
+                            musicIcon.classList.add('fa-volume-mute');
+                        } else {
+                            backgroundMusic.play();
+                            icon.className = 'fas fa-pause';
+                            musicIcon.classList.remove('fa-volume-mute');
+                            musicIcon.classList.add('fa-volume-up');
+                        }
                     } else {
-                        // Play new song
+                        // Reset all other buttons to play icon
+                        document.querySelectorAll('.playlist-item-play i').forEach(i => i.className = 'fas fa-play');
+                        
+                        // Set new source and play
                         backgroundMusic.src = songSrc;
-                        backgroundMusic.play().catch(e => console.log('Audio play error:', e));
+                        backgroundMusic.play().catch(e => console.error("Audio playback failed:", e));
                         
-                        // Reset all play buttons to "play" icon
-                        document.querySelectorAll('.playlist-item-play').forEach(btn => {
-                            btn.innerHTML = '<i class="fas fa-play"></i>';
-                        });
+                        // Update current button to pause icon
+                        icon.className = 'fas fa-pause';
                         
-                        // Set this button to "pause" icon
-                        playBtn.innerHTML = '<i class="fas fa-pause"></i>';
-                        
-                        // Sync global volume icon
+                        // Update global toggle icon
                         musicIcon.classList.remove('fa-volume-mute');
                         musicIcon.classList.add('fa-volume-up');
-                        isMusicPlaying = true;
+                        
+                        activePlayBtn = icon;
                     }
                 });
             });
 
-            // Handle Global Music Toggle logic to sync with playlist items
+            // Global Music Toggle Button Handle
             musicToggle.addEventListener('click', function() {
-                if (isMusicPlaying) {
+                if (backgroundMusic.src === "") {
+                    // If no song selected yet, play the first one in the list
+                    const firstItem = playlistItems[0];
+                    if(firstItem) {
+                       firstItem.querySelector('.playlist-item-play').click();
+                    }
+                    return;
+                }
+
+                if (!backgroundMusic.paused) {
                     backgroundMusic.pause();
                     musicIcon.classList.remove('fa-volume-up');
                     musicIcon.classList.add('fa-volume-mute');
-                    
-                    // Sync playlist icon
-                    document.querySelectorAll('.playlist-item').forEach(item => {
-                        if (backgroundMusic.src === item.getAttribute('data-src')) {
-                            item.querySelector('.playlist-item-play').innerHTML = '<i class="fas fa-play"></i>';
-                        }
-                    });
+                    // Sync active playlist button
+                    if (activePlayBtn) activePlayBtn.className = 'fas fa-play';
                 } else {
-                    backgroundMusic.play().catch(e => console.log('Audio play error:', e));
+                    backgroundMusic.play();
                     musicIcon.classList.remove('fa-volume-mute');
                     musicIcon.classList.add('fa-volume-up');
-                    
-                    // Sync playlist icon
-                    document.querySelectorAll('.playlist-item').forEach(item => {
-                        if (backgroundMusic.src === item.getAttribute('data-src')) {
-                            item.querySelector('.playlist-item-play').innerHTML = '<i class="fas fa-pause"></i>';
-                        }
-                    });
+                    // Sync active playlist button
+                    if (activePlayBtn) activePlayBtn.className = 'fas fa-pause';
                 }
-                isMusicPlaying = !isMusicPlaying;
             });
 
             // Helper Functions
