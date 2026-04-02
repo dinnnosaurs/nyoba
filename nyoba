@@ -550,138 +550,7 @@
       </div>
 
       <div class="gallery-container">
-        <div class="gallery" id="memoryGallery">
-          <div class="memory-card visible" style="--rotate: -2deg;">
-            <div class="card-tape" style="--rotate: -4deg"></div>
-            <img class="memory-img" src="https://raw.githubusercontent.com/dinnnosaurs/happy-birthday-v24/main/1.jpeg" alt="Memory 1" />
-            <div class="memory-caption">
-              Remember the first time we went on a date? We went to see our favorite band's concert; HINDIA
-            </div>
-            <div class="card-sticker">
-              <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="50" cy="50" r="50" fill="#ff6ec4"></circle>
-                <text x="50" y="65" font-family="Arial" font-size="40" text-anchor="middle" fill="white">🎸</text>
-              </svg>
-            </div>
-          </div>
-          <div class="memory-card visible" style="--rotate: 3deg;">
-            <div class="card-tape" style="--rotate: 6deg"></div>
-            <img class="memory-img" src="https://raw.githubusercontent.com/dinnnosaurs/happy-birthday-v24/main/2.jpeg" alt="Memory 2" />
-            <div class="memory-caption">
-              That time we stayed up all night just talking and watching the sunrise. I've never laughed so hard in my life!
-            </div>
-            <div class="card-sticker">
-              <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="50" cy="50" r="50" fill="#ff6ec4"></circle>
-                <text x="50" y="65" font-family="Arial" font-size="40" text-anchor="middle" fill="white">🌅</text>
-              </svg>
-            </div>
-          </div>
-          <div class="memory-card visible" style="--rotate: -1deg;">
-            <div class="card-tape" style="--rotate: -2deg"></div>
-            <img class="memory-img" src="3.jpg" alt="Memory 3" />
-            <div class="memory-caption">
-              Our first road trip together! You fell asleep and I drew a tiny mustache on you with a marker. You didn't notice for HOURS!
-            </div>
-            <div class="card-sticker">
-              <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="50" cy="50" r="50" fill="#ff6ec4"></circle>
-                <text x="50" y="65" font-family="Arial" font-size="40" text-anchor="middle" fill="white">🚗</text>
-              </svg>
-            </div>
-          </div>
-          <div class="memory-card visible" style="--rotate: 2deg;">
-            <div class="card-tape" style="--rotate: 4deg"></div>
-            <img class="memory-img" src="4.jpg" alt="Memory 4" />
-            <div class="memory-caption">
-              Remember our cooking disaster when we tried to make that fancy recipe? The smoke alarm going off, but the pizza we ordered after was the best ever!
-            </div>
-            <div class="card-sticker">
-              <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="50" cy="50" r="50" fill="#ff6ec4"></circle>
-                <text x="50" y="65" font-family="Arial" font-size="40" text-anchor="middle" fill="white">🍕</text>
-              </svg>
-            </div>
-          </div>
-          <div class="memory-card visible" style="--rotate: -3deg;">
-            <div class="card-tape" style="--rotate: -6deg"></div>
-            <img class="memory-img" src="5.jpg" alt="Memory 5" />
-            <div class="memory-caption">
-              Our camping trip under the stars. You were terrified of that tiny spider and jumped so high! Still my favorite memory.
-            </div>
-            <div class="card-sticker">
-              <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="50" cy="50" r="50" fill="#ff6ec4"></circle>
-                <text x="50" y="65" font-family="Arial" font-size="40" text-anchor="middle" fill="white">🏕️</text>
-              </svg>
-            </div>
-          </div>
-          <div class="memory-card visible" style="--rotate: 1deg;">
-            <div class="card-tape" style="--rotate: 2deg"></div>
-            <img class="memory-img" src="7.jpg" alt="Memory 6" />
-            <div class="memory-caption">
-              That concert where we danced until our feet hurt. Worth every blister!
-            </div>
-            <div class="card-sticker">
-              <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="50" cy="50" r="50" fill="#ff6ec4"></circle>
-                <text x="50" y="65" font-family="Arial" font-size="40" text-anchor="middle" fill="white">🎵</text>
-              </svg>
-            </div>
-          </div>
-          <div class="memory-card visible" style="--rotate: -2deg;">
-            <div class="card-tape" style="--rotate: -4deg"></div>
-            <img class="memory-img" src="8.jpg" alt="Memory 7" />
-            <div class="memory-caption">
-              When we built that epic blanket fort during the storm and watched movies all day. Best rainy day ever!
-            </div>
-            <div class="card-sticker">
-              <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="50" cy="50" r="50" fill="#ff6ec4"></circle>
-                <text x="50" y="65" font-family="Arial" font-size="40" text-anchor="middle" fill="white">🏰</text>
-              </svg>
-            </div>
-          </div>
-          <div class="memory-card visible" style="--rotate: 2deg;">
-            <div class="card-tape" style="--rotate: 4deg"></div>
-            <img class="memory-img" src="1.jpg" alt="Memory 8" />
-            <div class="memory-caption">
-              Our spontaneous beach day when we skipped class. I still find sand in my backpack sometimes!
-            </div>
-            <div class="card-sticker">
-              <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="50" cy="50" r="50" fill="#ff6ec4"></circle>
-                <text x="50" y="65" font-family="Arial" font-size="40" text-anchor="middle" fill="white">🏖️</text>
-              </svg>
-            </div>
-          </div>
-          <div class="memory-card visible" style="--rotate: -1deg;">
-            <div class="card-tape" style="--rotate: -2deg"></div>
-            <img class="memory-img" src="2.jpeg" alt="Memory 9" />
-            <div class="memory-caption">
-              You've always been there for me through thick and thin. I'm so grateful for your friendship. ❤️
-            </div>
-            <div class="card-sticker">
-              <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="50" cy="50" r="50" fill="#ff6ec4"></circle>
-                <text x="50" y="65" font-family="Arial" font-size="40" text-anchor="middle" fill="white">💕</text>
-              </svg>
-            </div>
-          </div>
-          <div class="memory-card visible" style="--rotate: 3deg;">
-            <div class="card-tape" style="--rotate: 6deg"></div>
-            <img class="memory-img" src="3.jpg" alt="Memory 10" />
-            <div class="memory-caption">
-              Happy Birthday to my best friend in the whole world! Here's to many more adventures together!
-            </div>
-            <div class="card-sticker">
-              <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="50" cy="50" r="50" fill="#ff6ec4"></circle>
-                <text x="50" y="65" font-family="Arial" font-size="40" text-anchor="middle" fill="white">🎂</text>
-              </svg>
-            </div>
-          </div>
-        </div>
+        <div class="gallery" id="memoryGallery"></div>
       </div>
 
       <div class="navigation-buttons">
@@ -701,88 +570,65 @@
       // Register ScrollTrigger plugin
       gsap.registerPlugin(ScrollTrigger);
 
-      // Memory data
+      // MENGATUR SUMBER GAMBAR DARI GITHUB 
+      // (Pastikan ekstensi .jpeg / .jpg di sini sama persis dengan yang ada di GitHub-mu!)
       const memories = [
         {
           image: "https://raw.githubusercontent.com/dinnnosaurs/happy-birthday-v24/main/1.jpeg",
-          caption:
-            "Remember the first time we went on a date? We went to see our favorite band's concert; HINDIA",
+          caption: "Remember the first time we went on a date? We went to see our favorite band's concert; HINDIA",
           isGif: false,
           rotationAngle: -2,
           emoji: "🎸",
         },
         {
           image: "https://raw.githubusercontent.com/dinnnosaurs/happy-birthday-v24/main/2.jpeg",
-          caption:
-            "That time we stayed up all night just talking and watching the sunrise. I've never laughed so hard in my life!",
+          caption: "That time we stayed up all night just talking and watching the sunrise. I've never laughed so hard in my life!",
           isGif: false,
           rotationAngle: 3,
           emoji: "🌅",
         },
         {
-          image: "3.jpg",
-          caption:
-            "Our first road trip together! You fell asleep and I drew a tiny mustache on you with a marker. You didn't notice for HOURS!",
+          image: "https://raw.githubusercontent.com/dinnnosaurs/happy-birthday-v24/main/3.jpeg",
+          caption: "Our first road trip together! You fell asleep and I drew a tiny mustache on you with a marker. You didn't notice for HOURS!",
           isGif: true,
           rotationAngle: -1,
           emoji: "🚗",
         },
         {
-          image: "4.jpg",
-          caption:
-            "Remember our cooking disaster when we tried to make that fancy recipe? The smoke alarm going off, but the pizza we ordered after was the best ever!",
+          image: "https://raw.githubusercontent.com/dinnnosaurs/happy-birthday-v24/main/4.jpeg",
+          caption: "Remember our cooking disaster when we tried to make that fancy recipe? The smoke alarm going off, but the pizza we ordered after was the best ever!",
           isGif: false,
           rotationAngle: 2,
           emoji: "🍕",
         },
         {
-          image: "5.jpg",
-          caption:
-            "Our camping trip under the stars. You were terrified of that tiny spider and jumped so high! Still my favorite memory.",
+          image: "https://raw.githubusercontent.com/dinnnosaurs/happy-birthday-v24/main/5.jpeg",
+          caption: "Our camping trip under the stars. You were terrified of that tiny spider and jumped so high! Still my favorite memory.",
           isGif: false,
           rotationAngle: -3,
           emoji: "🏕️",
         },
         {
-          image: "7.jpg",
-          caption:
-            "That concert where we danced until our feet hurt. Worth every blister!",
+          image: "https://raw.githubusercontent.com/dinnnosaurs/happy-birthday-v24/main/6.jpeg",
+          caption: "That concert where we danced until our feet hurt. Worth every blister!",
           isGif: true,
           rotationAngle: 1,
           emoji: "🎵",
         },
         {
-          image: "8.jpg",
-          caption:
-            "When we built that epic blanket fort during the storm and watched movies all day. Best rainy day ever!",
+          image: "https://raw.githubusercontent.com/dinnnosaurs/happy-birthday-v24/main/7.jpeg",
+          caption: "When we built that epic blanket fort during the storm and watched movies all day. Best rainy day ever!",
           isGif: false,
           rotationAngle: -2,
           emoji: "🏰",
         },
         {
-          image: "1.jpg",
-          caption:
-            "Our spontaneous beach day when we skipped class. I still find sand in my backpack sometimes!",
+          image: "https://raw.githubusercontent.com/dinnnosaurs/happy-birthday-v24/main/8.jpeg",
+          caption: "Our spontaneous beach day when we skipped class. I still find sand in my backpack sometimes!",
           isGif: false,
           rotationAngle: 2,
           emoji: "🏖️",
-        },
-        {
-          image: "2.jpeg",
-          caption:
-            "You've always been there for me through thick and thin. I'm so grateful for your friendship. ❤️",
-          isGif: false,
-          rotationAngle: -1,
-          emoji: "💕",
-        },
-        {
-          image: "3.jpg",
-          caption:
-            "Happy Birthday to my best friend in the whole world! Here's to many more adventures together!",
-          isGif: true,
-          rotationAngle: 3,
-          emoji: "🎂",
-        },
+        }
       ];
 
       // Create confetti elements
@@ -903,22 +749,18 @@
           startSlideshowBtn.style.display = "none";
           pauseSlideshowBtn.style.display = "flex";
 
-          // Clear any existing interval to avoid multiple slideshows
           if (slideshowInterval) {
             clearInterval(slideshowInterval);
           }
 
           slideshowInterval = setInterval(() => {
-            // Move to next slide
             currentSlide = (currentSlide + 1) % memories.length;
 
-            // Calculate the scroll position of the current slide
             const cards = galleryElement.querySelectorAll(".memory-card");
             if (cards && cards.length > 0 && cards[currentSlide]) {
               const cardRect = cards[currentSlide].getBoundingClientRect();
               const galleryRect = galleryElement.getBoundingClientRect();
 
-              // Scroll to center the current card
               galleryElement.scrollTo({
                 left:
                   cards[currentSlide].offsetLeft -
@@ -927,34 +769,30 @@
                 behavior: "smooth",
               });
             }
-          }, 2000); // Change slide every 2 seconds
+          }, 2000);
         }
 
         function pauseSlideshow() {
           pauseSlideshowBtn.style.display = "none";
           startSlideshowBtn.style.display = "flex";
 
-          // Clear interval to stop slideshow
           if (slideshowInterval) {
             clearInterval(slideshowInterval);
             slideshowInterval = null;
           }
         }
 
-        // Event listeners for slideshow controls
         startSlideshowBtn.addEventListener("click", startSlideshow);
         pauseSlideshowBtn.addEventListener("click", pauseSlideshow);
 
-        // Event listeners for navigation buttons
         backButton.addEventListener("click", function () {
-          window.location.href = "index.html"; // Adjust this to your welcome page URL
+          window.location.href = "index.html";
         });
 
         nextButton.addEventListener("click", function () {
-          window.location.href = "cake.html"; // Adjust this to your next surprise page URL
+          window.location.href = "cake.html";
         });
 
-        // Scroll animations with GSAP
         gsap.from(".header", {
           duration: 1,
           y: -50,
@@ -970,7 +808,6 @@
           ease: "power3.out",
         });
 
-        // Add animation to stickers
         gsap.utils.toArray(".sticker").forEach((sticker) => {
           gsap.to(sticker, {
             rotation: "random(-20, 20)",
@@ -981,7 +818,6 @@
           });
         });
 
-        // Create hover effect for memory cards
         document.querySelectorAll(".memory-card").forEach((card) => {
           card.addEventListener("mouseenter", function () {
             gsap.to(this, {
@@ -1000,7 +836,6 @@
           });
         });
 
-        // Auto scroll to show the gallery
         setTimeout(() => {
           const galleryContainer = document.querySelector(".gallery-container");
           galleryContainer.scrollIntoView({
