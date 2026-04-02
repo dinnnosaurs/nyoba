@@ -447,7 +447,8 @@
             <div class="modal-body">
                 <div class="playlist">
                     <h3 style="margin-bottom: 15px;">Lagu-lagu Spesial Untukmu 🎵</h3>
-                    <div class="playlist-item">
+                    
+                    <div class="playlist-item" data-src="https://github.com/dinnnosaurs/happy-birthday-v24/raw/main/Hindia%20-%20Rumah%20Ke%20Rumah.mp3">
                         <img src="3.jpg" alt="Song cover">
                         <div class="playlist-item-info">
                             <div class="playlist-item-title">Rumah ke Rumah</div>
@@ -455,7 +456,8 @@
                         </div>
                         <button class="playlist-item-play"><i class="fas fa-play"></i></button>
                     </div>
-                    <div class="playlist-item">
+                    
+                    <div class="playlist-item" data-src="https://github.com/dinnnosaurs/happy-birthday-v24/raw/main/Perunggu%20-%20Ini%20Abadi.mp3">
                         <img src="1.jpg" alt="Song cover">
                         <div class="playlist-item-info">
                             <div class="playlist-item-title">Ini Abadi</div>
@@ -463,7 +465,8 @@
                         </div>
                         <button class="playlist-item-play"><i class="fas fa-play"></i></button>
                     </div>
-                    <div class="playlist-item">
+                    
+                    <div class="playlist-item" data-src="https://github.com/dinnnosaurs/happy-birthday-v24/raw/main/Hindia%20-%20semua%20lagu%20cinta%20terdengar%20sama.mp3">
                         <img src="6.jpg" alt="Song cover">
                         <div class="playlist-item-info">
                             <div class="playlist-item-title">Semua Lagu Cinta Terdengar Sama</div>
@@ -471,7 +474,8 @@
                         </div>
                         <button class="playlist-item-play"><i class="fas fa-play"></i></button>
                     </div>
-                    <div class="playlist-item">
+                    
+                    <div class="playlist-item" data-src="https://github.com/dinnnosaurs/happy-birthday-v24/raw/main/Hindia%20-%20kids.mp3">
                         <img src="2.jpeg" alt="Song cover">
                         <div class="playlist-item-info">
                             <div class="playlist-item-title">Kids</div>
@@ -479,7 +483,8 @@
                         </div>
                         <button class="playlist-item-play"><i class="fas fa-play"></i></button>
                     </div>
-                    <div class="playlist-item">
+                    
+                    <div class="playlist-item" data-src="https://github.com/dinnnosaurs/happy-birthday-v24/raw/main/Perunggu%20-%20Pastikan%20Riuh%20Akhiri%20Malammu.mp3">
                         <img src="5.jpg" alt="Song cover">
                         <div class="playlist-item-info">
                             <div class="playlist-item-title">Pastikan Riuh Akhiri Malammu</div>
@@ -487,6 +492,7 @@
                         </div>
                         <button class="playlist-item-play"><i class="fas fa-play"></i></button>
                     </div>
+
                 </div>
                 <div style="margin-top: 20px;">
                     <a href="#" download class="back-button" style="background: #ffb6c1; border-color: #ffb6c1; color: white;">
@@ -574,21 +580,72 @@
                 modalOverlay.classList.remove('active');
             });
 
-            // Music controls
+            // --- Playlist Logic Implementation ---
+            const playlistItems = document.querySelectorAll('.playlist-item');
+            const backgroundMusic = document.getElementById('background-music');
             const musicToggle = document.getElementById('music-toggle');
             const musicIcon = document.getElementById('music-icon');
-            const backgroundMusic = document.getElementById('background-music');
             let isMusicPlaying = false;
 
+            playlistItems.forEach(item => {
+                const playBtn = item.querySelector('.playlist-item-play');
+                
+                playBtn.addEventListener('click', function() {
+                    const songSrc = item.getAttribute('data-src');
+                    
+                    // Check if current song is already playing
+                    if (backgroundMusic.src === songSrc && !backgroundMusic.paused) {
+                        // Pause the song
+                        backgroundMusic.pause();
+                        playBtn.innerHTML = '<i class="fas fa-play"></i>';
+                        musicIcon.classList.remove('fa-volume-up');
+                        musicIcon.classList.add('fa-volume-mute');
+                        isMusicPlaying = false;
+                    } else {
+                        // Play new song
+                        backgroundMusic.src = songSrc;
+                        backgroundMusic.play().catch(e => console.log('Audio play error:', e));
+                        
+                        // Reset all play buttons to "play" icon
+                        document.querySelectorAll('.playlist-item-play').forEach(btn => {
+                            btn.innerHTML = '<i class="fas fa-play"></i>';
+                        });
+                        
+                        // Set this button to "pause" icon
+                        playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+                        
+                        // Sync global volume icon
+                        musicIcon.classList.remove('fa-volume-mute');
+                        musicIcon.classList.add('fa-volume-up');
+                        isMusicPlaying = true;
+                    }
+                });
+            });
+
+            // Handle Global Music Toggle logic to sync with playlist items
             musicToggle.addEventListener('click', function() {
                 if (isMusicPlaying) {
                     backgroundMusic.pause();
                     musicIcon.classList.remove('fa-volume-up');
                     musicIcon.classList.add('fa-volume-mute');
+                    
+                    // Sync playlist icon
+                    document.querySelectorAll('.playlist-item').forEach(item => {
+                        if (backgroundMusic.src === item.getAttribute('data-src')) {
+                            item.querySelector('.playlist-item-play').innerHTML = '<i class="fas fa-play"></i>';
+                        }
+                    });
                 } else {
                     backgroundMusic.play().catch(e => console.log('Audio play error:', e));
                     musicIcon.classList.remove('fa-volume-mute');
                     musicIcon.classList.add('fa-volume-up');
+                    
+                    // Sync playlist icon
+                    document.querySelectorAll('.playlist-item').forEach(item => {
+                        if (backgroundMusic.src === item.getAttribute('data-src')) {
+                            item.querySelector('.playlist-item-play').innerHTML = '<i class="fas fa-pause"></i>';
+                        }
+                    });
                 }
                 isMusicPlaying = !isMusicPlaying;
             });
