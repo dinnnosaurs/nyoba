@@ -712,7 +712,7 @@
           emoji: "🎸",
         },
         {
-          image: "2.jpeg",
+          image: "https://raw.githubusercontent.com/dinnnosaurs/happy-birthday-v24/blob/main/2.jpeg",
           caption:
             "That time we stayed up all night just talking and watching the sunrise. I've never laughed so hard in my life!",
           isGif: false,
@@ -768,7 +768,7 @@
           emoji: "🏖️",
         },
         {
-          image: "2.jpeg",
+          image: "https://raw.githubusercontent.com/dinnnosaurs/happy-birthday-v24/blob/main/2.jpeg",
           caption:
             "You've always been there for me through thick and thin. I'm so grateful for your friendship. ❤️",
           isGif: false,
