@@ -449,7 +449,7 @@
                 <div class="playlist">
                     <h3 style="margin-bottom: 15px;">Lagu-lagu Spesial Untukmu 🎵</h3>
                     <div class="playlist-item" data-src="https://raw.githubusercontent.com/dinnnosaurs/happy-birthday-v24/main/Hindia%20-%20Rumah%20Ke%20Rumah.mp3">
-                        <img src="3.jpg" alt="Song cover">
+                        <img src="https://raw.githubusercontent.com/dinnnosaurs/happy-birthday-v24/main/mdb.jpg" alt="Song cover">
                         <div class="playlist-item-info">
                             <div class="playlist-item-title">Rumah ke Rumah</div>
                             <div class="playlist-item-artist">Hindia</div>
@@ -457,7 +457,7 @@
                         <button class="playlist-item-play"><i class="fas fa-play"></i></button>
                     </div>
                     <div class="playlist-item" data-src="https://raw.githubusercontent.com/dinnnosaurs/happy-birthday-v24/main/Hindia%20-%20semua%20lagu%20cinta%20terdengar%20sama.mp3">
-                        <img src="6.jpg" alt="Song cover">
+                        <img src="https://raw.githubusercontent.com/dinnnosaurs/happy-birthday-v24/main/doves.jpg" alt="Song cover">
                         <div class="playlist-item-info">
                             <div class="playlist-item-title">Semua Lagu Cinta Terdengar Sama</div>
                             <div class="playlist-item-artist">Hindia</div>
@@ -465,7 +465,7 @@
                         <button class="playlist-item-play"><i class="fas fa-play"></i></button>
                     </div>
                     <div class="playlist-item" data-src="https://raw.githubusercontent.com/dinnnosaurs/happy-birthday-v24/main/Hindia%20-%20everything%20u%20are.mp3">
-                        <img src="2.jpeg" alt="Song cover">
+                        <img src="https://raw.githubusercontent.com/dinnnosaurs/happy-birthday-v24/main/doves.jpg" alt="Song cover">
                         <div class="playlist-item-info">
                             <div class="playlist-item-title">Everything U Are</div>
                             <div class="playlist-item-artist">Hindia</div>
@@ -473,7 +473,7 @@
                         <button class="playlist-item-play"><i class="fas fa-play"></i></button>
                     </div>
                     <div class="playlist-item" data-src="https://raw.githubusercontent.com/dinnnosaurs/happy-birthday-v24/main/Perunggu%20-%20Pastikan%20Riuh%20Akhiri%20Malammu.mp3">
-                        <img src="5.jpg" alt="Song cover">
+                        <img src="https://raw.githubusercontent.com/dinnnosaurs/happy-birthday-v24/main/memorandum.jpg" alt="Song cover">
                         <div class="playlist-item-info">
                             <div class="playlist-item-title">Pastikan Riuh Akhiri Malammu</div>
                             <div class="playlist-item-artist">Perunggu</div>
@@ -481,7 +481,7 @@
                         <button class="playlist-item-play"><i class="fas fa-play"></i></button>
                     </div>
                     <div class="playlist-item" data-src="https://raw.githubusercontent.com/dinnnosaurs/happy-birthday-v24/main/Perunggu%20-%20Ini%20Abadi.mp3">
-                        <img src="1.jpg" alt="Song cover">
+                        <img src="https://raw.githubusercontent.com/dinnnosaurs/happy-birthday-v24/main/memorandum.jpg" alt="Song cover">
                         <div class="playlist-item-info">
                             <div class="playlist-item-title">Ini Abadi</div>
                             <div class="playlist-item-artist">Perunggu</div>
