@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Premium Birthday Cake | Executable Success</title>
+    <title>Marine Excellence | Fish Oil Edition</title>
     <style>
-        /* Modern Refactoring */
+        /* Modern Refactoring - Marine Theme */
         :root {
-            --cake-gold: #d4af37;
-            --cake-cream: #f9f1d0;
-            --ocean-dark: #002b36;
-            --accent-pink: #ff3366;
+            --sea-deep: #003366;
+            --omega-gold: #ffcc33;
+            --coral-soft: #ff9999;
+            --foam-white: #f0f8ff;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
-            background: radial-gradient(circle, #004d40, #001a1a);
+            background: radial-gradient(circle at center, #005b96, #002244);
             min-height: 100vh;
             display: flex;
             flex-direction: column;
@@ -34,11 +34,11 @@
         /* Ambient Elements */
         .balloon {
             position: absolute;
-            width: 35px;
-            height: 45px;
-            border-radius: 50%;
-            opacity: 0.7;
-            animation: float 12s infinite linear;
+            width: 30px;
+            height: 40px;
+            border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+            opacity: 0.6;
+            animation: float 10s infinite ease-in;
             z-index: 1;
         }
 
@@ -47,7 +47,7 @@
             100% { transform: translateY(-20vh) rotate(360deg); }
         }
 
-        /* Refactored 3-Tier Golden Cake */
+        /* 3-Tier Marine & Gold Cake */
         .cake-container {
             position: relative;
             width: 300px;
@@ -61,114 +61,120 @@
 
         .tier {
             position: relative;
-            width: 200px;
-            background: linear-gradient(to right, var(--cake-gold), #ffd700, var(--cake-gold));
-            border-radius: 15px 15px 5px 5px;
-            box-shadow: inset 0 -10px 15px rgba(0,0,0,0.2), 0 10px 20px rgba(0,0,0,0.4);
+            background: linear-gradient(to bottom, #0077be, #005b96);
+            border-radius: 10px 10px 5px 5px;
+            box-shadow: inset 0 -5px 10px rgba(0,0,0,0.3), 0 8px 15px rgba(0,0,0,0.5);
+            border: 2px solid var(--omega-gold);
         }
 
-        .tier-1 { width: 220px; height: 80px; z-index: 3; }
-        .tier-2 { width: 170px; height: 70px; z-index: 4; margin-bottom: -5px; }
+        .tier-1 { width: 240px; height: 90px; z-index: 3; }
+        .tier-2 { width: 180px; height: 75px; z-index: 4; margin-bottom: -5px; }
         .tier-3 { width: 120px; height: 60px; z-index: 5; margin-bottom: -5px; }
 
-        /* Cream Drip Effect */
+        /* Golden Oil Drip Effect */
         .tier::after {
             content: "";
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
-            height: 20px;
-            background: var(--cake-cream);
-            border-radius: 15px 15px 100% 100% / 15px 15px 50% 50%;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            height: 25px;
+            background: var(--omega-gold);
+            border-radius: 10px 10px 80% 80% / 10px 10px 40% 40%;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
         }
 
         /* Candles */
         .candle-container {
             position: absolute;
-            top: -40px;
+            top: -45px;
             width: 100%;
             display: flex;
             justify-content: center;
-            gap: 8px;
+            gap: 10px;
             z-index: 10;
         }
 
         .candle {
             width: 10px;
-            height: 40px;
-            background: linear-gradient(to top, #fff, var(--cake-gold));
+            height: 45px;
+            background: repeating-linear-gradient(45deg, #fff, #fff 5px, var(--sea-deep) 5px, var(--sea-deep) 10px);
             border-radius: 3px;
             position: relative;
             cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
 
         .flame {
             position: absolute;
-            top: -18px;
+            top: -20px;
             left: 50%;
             transform: translateX(-50%);
-            width: 14px;
-            height: 22px;
-            background: radial-gradient(#fff, #ffa500, #ff4500);
+            width: 16px;
+            height: 24px;
+            background: radial-gradient(#fff, #ffeb3b, #f44336);
             border-radius: 50% 50% 20% 20%;
-            box-shadow: 0 0 15px #ffcc00;
-            animation: flicker 0.6s infinite alternate;
+            box-shadow: 0 0 20px #ffeb3b;
+            animation: flicker 0.5s infinite alternate;
         }
 
         @keyframes flicker {
-            from { transform: translateX(-50%) scale(1); opacity: 0.9; }
-            to { transform: translateX(-50%) scale(1.1); opacity: 1; }
+            from { transform: translateX(-50%) scale(1); opacity: 0.8; }
+            to { transform: translateX(-50%) scale(1.2); opacity: 1; }
         }
 
         .blown .flame { display: none; }
         .blown::after {
-            content: "☁";
+            content: "";
             position: absolute;
-            top: -20px;
-            left: 0;
-            font-size: 12px;
-            animation: smoke 2s forwards;
-            opacity: 0;
+            top: -15px;
+            left: 50%;
+            width: 2px;
+            height: 10px;
+            background: rgba(255,255,255,0.4);
+            animation: smoke 1.5s forwards;
         }
 
         @keyframes smoke {
-            0% { opacity: 0.8; transform: translateY(0); }
-            100% { opacity: 0; transform: translateY(-40px) scale(2); }
+            0% { opacity: 1; transform: translateX(-50%) translateY(0); }
+            100% { opacity: 0; transform: translateX(10px) translateY(-30px); }
         }
 
-        /* Updated Wish Message */
+        /* Wish Message Popup */
         .wish-message {
             position: fixed;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%) scale(0);
-            background: #ffffff;
-            color: #333;
-            padding: 40px;
-            border-radius: 15px;
+            background: var(--foam-white);
+            color: var(--sea-deep);
+            padding: 35px;
+            border-radius: 20px;
             text-align: center;
-            box-shadow: 0 0 50px rgba(212, 175, 55, 0.5);
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.6), 0 0 20px var(--omega-gold);
             z-index: 1000;
-            transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            width: 85%;
+            max-width: 450px;
+            transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            border: 4px double var(--omega-gold);
         }
 
         .wish-message.show { transform: translate(-50%, -50%) scale(1); }
-
-        .wish-message h2 { color: var(--ocean-dark); margin-bottom: 15px; }
-        .wish-message code { background: #eee; padding: 2px 6px; border-radius: 4px; }
+        .wish-message h2 { font-weight: 800; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
+        .wish-message p { font-size: 1.1rem; line-height: 1.6; }
 
         .btn {
-            margin-top: 20px;
-            padding: 12px 25px;
-            background: var(--ocean-dark);
+            margin-top: 25px;
+            padding: 12px 30px;
+            background: var(--sea-deep);
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 50px;
             cursor: pointer;
             font-weight: bold;
+            transition: 0.3s;
         }
+        .btn:hover { background: #004a8d; transform: scale(1.05); }
     </style>
 </head>
 <body>
@@ -182,9 +188,9 @@
     </div>
 
     <div class="wish-message" id="wishPopup">
-        <h2>System.out.println("Success!");</h2>
-        <p>Semoga tahun ini seluruh <code>commit</code> hidupmu berakhir <code>success</code>, tanpa ada <code>bug</code> di hati, dan dilancarkan jalan menuju impian terbesarmu! 🚀✨</p>
-        <button class="btn" onclick="closePopup()">Terima Kasih! ❤️</button>
+        <h2>Purification Success! ✨</h2>
+        <p>Selamat ulang tahun! Semoga tahun ini membawa <b>High Quality Results</b> dalam risetmu, kelancaran beasiswa <b>LPDP</b>, dan tercapainya impian membangun <b>National Center of Excellence for Fish Oil</b>! 🐟✨</p>
+        <button class="btn" onclick="closePopup()">Aamiin! ❤️</button>
     </div>
 
     <script>
@@ -211,13 +217,14 @@
                 group.appendChild(c);
             }
 
-            // Create Balloons
-            for(let i=0; i<20; i++) {
+            // Create Ocean Bubbles
+            for(let i=0; i<25; i++) {
                 const b = document.createElement('div');
                 b.className = 'balloon';
                 b.style.left = Math.random() * 100 + 'vw';
-                b.style.backgroundColor = `hsl(${Math.random() * 360}, 70%, 60%)`;
-                b.style.animationDelay = Math.random() * 5 + 's';
+                b.style.backgroundColor = `rgba(255, 255, 255, ${Math.random() * 0.4})`;
+                b.style.border = "1px solid rgba(255,255,255,0.5)";
+                b.style.animationDelay = Math.random() * 8 + 's';
                 document.body.appendChild(b);
             }
         }
