@@ -568,8 +568,8 @@
 
     <div class="wish-message" id="wishMessage" bis_skin_checked="1">
       <h2>✨ Selamat Ulang Tahun, Nurdiansyah! ✨</h2>
-      <p>Semoga sukses selalu, beasiswa LPDP-nya dilancarkan, dan mimpimu untuk menjadi Principal Investigator serta membangun National Center of Excellence for Fish Oil segera terwujud! 🎂🎓🔬</p>
-      <button class="btn" onclick="closeWishMessage()">Amin! Terima kasih ❤️</button>
+      <p>Happy birthday to my favorite ex! Seriously though, stop being such a grumpy head, let’s leave all that 'marah-marah' energy in the past, okay? While we're at it, i’m also wishing you a dry pillow tonight, so please stop drooling already! On a more serious note, good luck with your post-grad life. i just know you’re gonna kill it and land that dream job in no time. And well, cliché as it sounds, best wishes for everything else!"</p>
+      <button class="btn" onclick="closeWishMessage()">Aamiin! thank you ❤️</button>
     </div>
 
     <div class="nav-buttons" bis_skin_checked="1">
